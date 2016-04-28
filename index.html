@@ -17,24 +17,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
-    <!-- Custom styles for this template -->
-    <link href="./css/jumbotron-narrow.css" rel="stylesheet">
   </head>
-
   <body>
 
     <div class="container">
       <div class="header clearfix">
         <br>
-        <img src = "logoLeanplumBig.png">
+        <img src = "leanplum_logo_large.png" width ="240" height = "33">
         <h2>Signature Generator</h2>
         <hr>
       </div>
 
       <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" class="form-control" placeholder="Name"></br>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" class="form-control" placeholder="First Name"></br>
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" class="form-control" placeholder="Last Name"></br>
         <label for="title">Title:</label>
         <input type="text" id="title" class="form-control" placeholder="Director of Rookies"></br>
         <label for="phone">Phone Number:</label>
@@ -42,19 +40,22 @@
         <!-- <p><a class="btn btn-lg btn-success" id ="checkButton" role="button">Check!</a></p></br> -->
         <hr>
         <div id = "resultDiv">
-        <div id="nameResult"></div>
+        <div id="firstNameResult"></div>
+        <div id="lastNameResult"></div>
         <div id="titleResult"></div>
         <div id="phoneResult"></div>
         <p></p>
         <a href="http://www.leanplum.com">
-          <img src = "logoLeanplumBig.png" width ="111" height = "31">
+          <img src = "leanplum_logo_large.png" width ="120" height = "16.5">
         </a>
-        <div>
-          <font color = "b866b8" style ="font-size: 11px"> Personalized Messaging &middot UI Optimization</font>
+        <div style = "height: 1em">
+          <font style ="font-size: 12px" line-height: 80%;> 
+            The Total Package 
+          </font>
         </div>
         <div>
-          <font color = "b866b8" style ="font-size: 11px">
-            Mobile A/B Testing & Analytics 
+          <font style ="font-size: 11px">
+            For Mobile ROI
           </font>
         </div>
         <hr>
@@ -69,9 +70,13 @@
       </div> 
     </div>
       <script>
-      document.getElementById("name").addEventListener('keyup', function (e) {
-            var name = document.getElementById('name').value;
-            document.getElementById("nameResult").innerHTML = "<font size = \"3\">" + "<b>" + name + "</b>" + "</font>";
+      document.getElementById("first_name").addEventListener('keyup', function (e) {
+            var first_name = document.getElementById('first_name').value;
+            document.getElementById("firstNameResult").innerHTML = "<font size = \"2.5\">" + "<b>" + first_name + "</b>" + "</font>";
+        });
+      document.getElementById("last_name").addEventListener('keyup', function (e) {
+            var last_name = document.getElementById('last_name').value;
+            document.getElementById("lastNameResult").innerHTML = "<font size = \"2.5\">" + "<b>" + last_name + "</b>" + "</font>";
         });
       document.getElementById("title").addEventListener('keyup', function (e) {
             var title = document.getElementById('title').value;
